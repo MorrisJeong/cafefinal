@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      
-   
-  </head>
-  <body >
- 
-    
-      
 <section class="container-fluid" id="section1">
 
     <div class="v-center">
-        <h1 style="z-index:1000; color:	#FFF5EE; font-weight:bold; font-family:Jeju Gothic; font-size:8vh" class=" text-center ">경희야,<br> 카페 어디까지 가봤니?</h1>
+        <h1 style="z-index:1000; color:	#FFF5EE; font-weight:bold; font-family:Jeju Gothic; font-size:8vh" class=" text-center ">KHU CAFE</h1>
         <hr>
         
         <division> 
@@ -27,62 +17,16 @@
             </span>
         </div>
     </a>
-    <script>
-function printTime() {
-              var clock = document.getElementById("clock");            // 출력할 장소 선택
-              var now = new Date();                                                  // 현재시간
-              var nowTime = now.getFullYear() + "년 " + (now.getMonth()+1) + "월 " + now.getDate() + "일 " + now.getHours() + "시 " + now.getMinutes() + "분 " + now.getSeconds() + "초 ";
-              clock.innerHTML = nowTime;           // 현재시간을 출력
-              
-              setTimeout("printTime()",1000);         // setTimeout(“실행할함수”,시간) 시간은1초의 경우 1000
-}
-function countTime() {
-              var cnt=0;
-              var count = document.getElementById("count");            // 출력할 장소 선택
-              var now1 = new Date();                                                  // 현재시간
-
-              for(var i =0 ; i<positions.length;i++){
-                  if(now1.getHours()>positions[i].openH && now1.getHours()<positions[i].closeH) cnt++;
-                  if(now1.getHours()==positions[i].openH){
-                      if(now.getMinutes()>positions[i].openM) cnt++;
-                  }
-                  if(now1.getHours()==positions[i].closeH){
-                      if(now1.getMinutes()<positions[i].closeM) cnt++;
-                  }
-              }
-              count.innerHTML = cnt;           // 현재시간을 출력
-              setTimeout("countTime()",60000);         // setTimeout(“실행할함수”,시간) 시간은1초의 경우 1000
-}
-window.onload = function() {                         // 페이지가 로딩되면 실행
-              printTime();
-              countTime();
-}
-</script>
+    
     
 </section>
-
+<!--
 <section class="container-fluid"  id="section3">
      <h1 class="text-center" style ="font-family:Hanna;">어떤 카페를 갈까?</h1>
     
     <div class="container" style="margin-top:80px;">
         <div class="row" style="font-family:lato;" >
-            <div class="col-sm-4">
-                <div class="row jeju">
-                    <div class="col-sm-12 text-center" >
-                        <div class="panel panel-default slideInLeft animate">
-                            <div class="panel-heading">
-                                <h3>거리</h3></div>
-                            <div class="panel-body">
-                                <p>가까운 곳이 최고다!</p>
-                                <a href="#distance">
-                                <hr>GO
-                                <hr>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <div class="col-sm-8 text-center">
                 <div class="row jeju" >
                     <div class="col-sm-12 text-center" >
@@ -116,14 +60,14 @@ window.onload = function() {                         // 페이지가 로딩되�
                 </div>
             </div>
             
-        </div>
-        <!--/row-->
+        </div>-->
+        <!--/row--><!--
         <div class="row">
             <br>
         </div>
-    </div>
+    </div>-->
     <!--/container-->
-</section>
+<!--</section> -->
 <section class="container-fluid" id="section2">
     <a name="distance">
 	<div class ="container">
@@ -164,260 +108,8 @@ window.onload = function() {                         // 페이지가 로딩되�
 </div>
 
    <!-- services와 clusterer 라이브러리 불러오기 -->
-   <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=04e759f8f58ecbe9782f2bbae2762b12&libraries=services,clusterer"></script>
-    <script>
-      var container = document.getElementById('map');
-      var options = {
-         center: new daum.maps.LatLng(37.247587, 127.078492),
-         level: 3
-      };
-      
-      var map = new daum.maps.Map(container, options);
-      // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
-        var positions = [
-            {
-                id : '0',
-                name: '스타벅스', 
-                price: '2000',
-                openH: '9',
-                openM: '00',
-                closeH: '23',
-                closeM: '00',
-                opentime: '9:00',
-                closetime: '23:00',
-                latlng: new daum.maps.LatLng(37.247844, 127.076789)
-            },
-            {    
-                id : '1',
-                name: '엔젤리너스', 
-                price: '1000',
-                openH: '8',
-                openM: '00',
-                closeH: '22',
-                closeM: '00',
-                opentime: '8:00',
-                closetime: '22:00',
-                latlng: new daum.maps.LatLng(37.246855, 127.076581)
-            },
-            {    
-                id : '2',
-                name: '캠퍼(우정원)', 
-                price: '1000',
-                openH: '8',
-                openM: '00',
-                closeH: '22',
-                closeM: '00',
-                opentime: '8:00',
-                closetime: '22:00',
-                latlng: new daum.maps.LatLng(37.245963, 127.076892)
-            },
-            {    
-                id : '3',
-                name: '일층카페(우정원)', 
-                price: '1000',
-                openH: '8',
-                openM: '00',
-                closeH: '22',
-                closeM: '00',
-                opentime: '8:00',
-                closetime: '22:00',
-                latlng: new daum.maps.LatLng(37.245777, 127.077010)
-            },
-            {    
-                id : '4',
-                name: '데땅(우정원)', 
-                price: '1000',
-                openH: '8',
-                openM: '00',
-                closeH: '22',
-                closeM: '00',
-                opentime: '8:00',
-                closetime: '22:00',
-                latlng: new daum.maps.LatLng(37.246176, 127.076742)
-            },
-            {    
-                id : '5',
-                name: '할리스', 
-                price: '1000',
-                openH: '8',
-                openM: '00',
-                closeH: '22',
-                closeM: '00',
-                opentime: '8:00',
-                closetime: '22:00',
-                latlng: new daum.maps.LatLng(37.247941, 127.076468)
-            },
-            {    
-                id : '6',
-                name: '플라타너스', 
-                price: '1000',
-                openH: '8',
-                openM: '00',
-                closeH: '22',
-                closeM: '00',
-                opentime: '8:00',
-                closetime: '22:00',
-                latlng: new daum.maps.LatLng(37.247931, 127.078420)
-            },
-            {    
-                id : '7',
-                name: '카페베네', 
-                price: '1000',
-                openH: '8',
-                openM: '00',
-                closeH: '22',
-                closeM: '00',
-                opentime: '8:00',
-                closetime: '22:00',
-                latlng: new daum.maps.LatLng(37.248442, 127.078951)
-            }, 
-            {    
-                id : '8',
-                name: '투레빗', 
-                price: '1000',
-                openH: '8',
-                openM: '00',
-                closeH: '22',
-                closeM: '00',
-                opentime: '8:00',
-                closetime: '22:00',
-                latlng: new daum.maps.LatLng(37.247913, 127.076714)
-            },
-            {    
-                id : '9',
-                name: '일층카페(제2기숙사)', 
-                price: '1000',
-                openH: '8',
-                openM: '00',
-                closeH: '22',
-                closeM: '00',
-                opentime: '8:00',
-                closetime: '22:00',
-                latlng: new daum.maps.LatLng(37.243726, 127.076923)
-            },
-            {    
-                id : '10',
-                name: '쿠피(도서관점)', 
-                price: '1000',
-                openH: '8',
-                openM: '00',
-                closeH: '22',
-                closeM: '00',
-                opentime: '8:00',
-                closetime: '22:00',
-                latlng: new daum.maps.LatLng(37.241015, 127.079412)
-            },
-            {    
-                id : '11',
-                name: '모카팩토리', 
-                price: '1000',
-                openH: '8',
-                openM: '00',
-                closeH: '22',
-                closeM: '00',
-                opentime: '8:00',
-                closetime: '22:00',
-                latlng: new daum.maps.LatLng(37.246510, 127.077805)
-            },
-            {    
-                id : '12',
-                name: '일투오', 
-                price: '1000',
-                openH: '8',
-                openM: '00',
-                closeH: '22',
-                closeM: '00',
-                opentime: '8:00',
-                closetime: '22:00',
-                latlng: new daum.maps.LatLng(37.246694, 127.077071)
-            },
-        ],selectedMarker = null;
-        
-        
-        for (var i = 0; i < positions.length; i ++){
-                // 마커를 생성합니다
-                var marker = new daum.maps.Marker({
-                    map: map, // 마커를 표시할 지도
-                    position: positions[i].latlng, // 마커의 위치
-                    //id: positions[i].id
-                    //content: positions[i].content
-                    });
-                marker.cafename = positions[i].name
-                marker.drink= positions[i].price
-                marker.opentime= positions[i].opentime
-                marker.closetime= positions[i].closetime
-                
-                var iwContent = positions[i].name, // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-                    iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
-                    
-                // 마커에 표시할 인포윈도우를 생성합니다 
-                var infowindow = new daum.maps.InfoWindow({
-                    content : iwContent,
-                    removable : iwRemoveable
-                });
-                
-                // 마커에 클릭이벤트를 등록합니다
-                daum.maps.event.addListener(marker, 'click', makeOverListener(map, marker, infowindow));
-                
-                
-        }
-        
-        
-            function makeOverListener(map, marker, infowindow) {
-                return function() {
-                    infowindow.open(map, marker);
-                
-                    var cafename = marker.cafename
-                    var drink = marker.drink
-                    var opentime = marker.opentime
-                    var closetime = marker.closetime
-                    
-                    $("#cafename").text(cafename)
-                    $("#drink").text(drink)
-                    $("#opentime").text(opentime)
-                    $("#closetime").text(closetime)
-                };
-            }
-        
-        // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
-        function makeOutListener(infowindow) {
-            return function() {
-                infowindow.close();
-            };
-        }
-     $(function() {
-          $(".comment_submit").click(function(){
-            
-            post_id = this.value;
-            post_content = $("#content_"+ post_id).val();
-            
-            $.ajax({
-              method: "POST",
-              url: "/home/comment_write",
-              data: { content: post_content, 
-                   id_of_post: post_id },
-              
-              success : function(){
-                $( "#comment_" + post_id ).append( "<p>" + post_content + "</p>");
-                $("#content_"+ post_id).val('');
-                alert( "댓글이 작성되었습니다." );
-              },
-              
-              error: function(){
-                alert( "댓글이 작성되지 않았습니다.");
-              }
-            })
-            
-            
-          });
-              //alert( "댓글이 작성되었습니다." );
-              //내용을 바로 써버리는 코드를 작성하시오
-              //placeholder 내용 지우기!
-              
-        });
+   
     
-                    
-   </script>
 
 	
 </section>
@@ -436,30 +128,28 @@ window.onload = function() {                         // 페이지가 로딩되�
             <div class="media jeju">
                 <h3 >Two rabbit</h3></br>
                 <div class="media-left">
-            <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/13335898_992344214214183_3775970513142618856_n.jpg?oh=20fe6e67ac01dea784119b05348676b4&amp;oe=57D23291" style="
-    width: 300px;
-">
+            <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/13335898_992344214214183_3775970513142618856_n.jpg?oh=20fe6e67ac01dea784119b05348676b4&amp;oe=57D23291" style="width: 300px;">
                 </div>
                 <div class="media-body media-middle">
                  <table style="text-align:center; float:right">
                         <tr>
-                             <td class="title">영업시간</td>
+                             <td class="title" style="width:50%">영업시간</td>
                              <td class="context">24시간 오픈</td>
                         </tr>
                         <tr>
-                             <td class="title">스터디룸 여부</td>
+                             <td class="title" style="width:50%">스터디룸 여부</td>
                              <td class="context">스터디룸 O(2시간 공짜/</br>이후 일인당 1000원(시간당))</td>
                         </tr>
                         <tr>
-                             <td class="title">리필가능 여부</td>
+                             <td class="title" style="width:50%">리필가능 여부</td>
                              <td class="context">아메리카노 리필가능</br>(머그잔 주문시/비용 1000원)</td>
                         </tr>
                         <tr>
-                             <td class="title">위치</td>
+                             <td class="title" style="width:50%">위치</td>
                              <td class="context">경기 수원시 영통구 덕영대로 1695 2층</td>
                         </tr>
                         <tr>
-                             <td class="title">전화번호</td>
+                             <td class="title" style="width:50%">전화번호</td>
                              <td class="context">031-206-0111</td>
                         </tr>
                         
@@ -629,9 +319,4 @@ window.onload = function() {                         // 페이지가 로딩되�
 </div>
     <!--scripts loaded here-->
     
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     
-    <script src="app/assets/javascripts/scripts.js"></script>
-  </body>
-</html>

@@ -26,9 +26,11 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  
+<script type="text/javascript" src="https://apis.daum.net/maps/maps3.js?apikey=bbc60e393616750c5e023fb6c1215c7c"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-
-
+<!--<script src="/app/assets/javascripts/time.js"></script> -->
 </head>
 <body>
    <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
@@ -46,7 +48,7 @@
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="#section1">HOME</a></li>
                 <li><a href="#section2">지도</a></li>
-                <li><a href="#section3">소개</a></li>
+                <!--<li><a href="#section3">소개</a></li> -->
                 <li><a href="#section4">순위</a></li>
                 <li><a href="#section5">의견</a></li>
                 <li><a href="/home/info">만든이</a></li>
@@ -59,6 +61,6 @@
 </br>
 </br>
 <%= yield %>
-
+<script src="/assets/map.js"></script>
 </body>
 </html>
