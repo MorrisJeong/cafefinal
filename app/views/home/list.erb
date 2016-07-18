@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-md-5 col-md-offset-1">
+  
+      <h1>사용자 의견 모음</h1>
+      <h3><% @every_post.each do |p |%></h3>
+        제목 : <%= p.title %> <br>
+        내용 : <%= p.content %> <br>
+        시간 : <%= p.created_at %> <br>
+        <% end %>      
+  </div>
+  
+</div>
+      
+  <div class="col-md-5 col-md-offset-1">
+  
+      <h1>카페정보 업데이트</h1>
+      <h3><% @mpost.each do |p|%></h3>
+        카페이름 : <%= p.cafename %> <br>
+        여는시간 : <%= p.opent %> <br>
+        닫는시간 : <%= p.closet %> <br>
+        메뉴 : <%= p.drink %> <br>
+        스터디룸 : <%= p.studyroom %> <br>        
+        전화번호 : <%= p.contactnumber %> <br>
+        <% end %>
+  </div>      
+      
+      <hr>
+
+
+<h2><a href = "/"> 메인 페이지로 돌아가기 </h2>    
+    
